@@ -1,3 +1,7 @@
+<%= form_tag import_users_path, multipart: true do %>
+  <%= file_field_tag :file, class: "file", accept: "text/csv", onchange: "validateFiles(this);" %>
+  <%= submit_tag "Click to upload the User CSV file", class: "btn btn-primary btn-sm", disabled: true %>
+<% end %>
 <p id="notice"><%= notice %></p>
 <h1>Current Users</h1>
 <table class="table">

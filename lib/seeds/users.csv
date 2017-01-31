@@ -1,11 +1,27 @@
 First Name,Last Name,Group Name,Role in Group
-Jen1,Zhang1,Group 1,Organizer
-Jen2,Zhang2,Group 2,Organizer
-Jen3,Zhang3,Group 3,Organizer
-Jen4,Zhang4,Group 1,Participant
-Jen5,Zhang5,Group 2,Participant
-Jen1,Zhang1,Group 2,Presenter
-Jen1,Zhang1,Group 3,Participant
-Jen6,Zhang6,Group 1,Organizer
-Jen7,Zhang7,Group 4,Organizer
-Jen8,Zhang8,Group 5,Organizer
+Sheron,Lemire,Breakfast,Organizer
+Altagracia,Pontes,Morning Snack,Organizer
+Cheryle,Denton,Lunch,Organizer
+Rodrigo,Espinosa,Afternoon Tea,Organizer
+Alberto,Gotcher,Dinner,Organizer
+Inez,Nardone,Book Club,Organizer
+Lore,Lightner,Book Club,Organizer
+Emerald,Kegley,Book Club,Presenter
+Russel,Lown,Breakfast,Participant
+Viviana,Isenberg,Morning Snack,Participant
+Gretchen,Quebedeaux,Lunch,Participant
+Adele,Devereaux,Afternoon Tea,Participant
+Roberto,Audia,Dinner,Participant
+Margit,Lowenthal,Book Club,Participant
+Joy,Eagar,Breakfast,Participant
+Mitchel,Labrie,Morning Snack,Participant
+Willa,Ceaser,Lunch,Participant
+Kristopher,Hardnett,Afternoon Tea,Participant
+Christine,Veneziano,Dinner,Participant
+Ariana,Rine,Book Club,Participant
+Sheron,Lemire,Morning Snack,Participant
+Altagracia,Pontes,Lunch,Participant
+Cheryle,Denton,Dinner,Participant
+Rodrigo,Espinosa,Dinner,Participant
+Alberto,Gotcher,Lunch,Participant
+Inez,Nardone,Dinner,Participant
