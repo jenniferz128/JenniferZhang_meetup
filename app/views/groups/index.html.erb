@@ -1,0 +1,33 @@
+<h1>Groups and the organizer(s)</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Group Name</th>
+      <th>Organizer(s)</th>
+      <th>Actioons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @groups.each do |group| %>
+      <tr>
+        <td><%= link_to group.name, group %></td>
+        <td> 
+          <% if group.roles.count > 0 %>
+            <% organizers = group.roles.where("title = ?", "Organizer") %>
+            <% organizers.each do |organizer| %>
+              <% user = User.find(organizer.user_id) %>
+              <%= user.first_name + " " + user.last_name  %>
+              <br>
+              <% end %>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to group do %><i class="fa fa-eye"></i>&nbsp;<% end %>
+          <%= link_to edit_group_path(group) do %><i class="fa fa-pencil-square-o"></i>&nbsp;<% end %>
+
+          <%= link_to group, method: :delete, data: { confirm: 'Are you sure?' } do %><i class="fa fa-trash-o"></i><% end %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to new_group_path do %><i class="fa fa-plus"></i> New Group<% end %>

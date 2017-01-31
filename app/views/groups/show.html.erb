@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+<h1>Users and their roles in <strong> <%= @group.name %></strong></h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>User Name</th>
+      <th>Roles</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% if @group.users.count > 0 %>
+    <% @group.users.each do |user| %>
+      <tr>
+        <td><%= user.first_name  + " " + user.last_name  %></td>
+        <td>
+		  <% role_titles = user.roles.where(group_id: @group.id) %>
+		  <% role_titles.each do |role| %>
+		    <%= role.title %>
+		    <br>
+		  <% end %>
+		</td>    
+      </tr>
+    <% end %>
+    <% else %>
+        <td>(no users found for this group)</td>
+        <td></td>
+    <% end %>
+
+
+  </tbody>
+</table>
+
+<%= link_to edit_group_path(@group) do %><i class="fa fa-pencil-square-o"></i><% end %> |
+<%= link_to groups_path do %><i class="fa fa-backward"></i><% end %>

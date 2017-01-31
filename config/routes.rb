@@ -1,4 +1,14 @@
 JenniferZhangMeetup::Application.routes.draw do
+  root :to => 'users#index'
+
+  resources :groups
+  resources :users
+
+  resource :users do
+    get 'import', :on => :collection
+    post 'import'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

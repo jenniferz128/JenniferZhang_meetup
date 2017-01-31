@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<h1>Current Users</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Group Name</th>
+      <th>Role in Group</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @roles.each do |role| %>
+      <% u = User.find(role.user_id) %>
+      <% g = Group.find(role.group_id) %>
+      <tr>
+        <td><%= u.first_name %></td>
+        <td><%= u.last_name %></td>
+        <td><%= link_to g.name, g %></td>
+        <td><%= role.title %></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
+<%= form_tag import_users_path, multipart: true do %>
+  <%= file_field_tag :file, class: "file", accept: "text/csv", onchange: "validateFiles(this);" %>
+  <%= submit_tag "Click to upload the User CSV file", class: "btn btn-primary btn-sm", disabled: true %>
+<% end %>
+
