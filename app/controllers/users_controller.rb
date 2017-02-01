@@ -11,10 +11,14 @@ class UsersController < ApplicationController
   end
   
   def import
+    remove_users_and_roles
     User.import(params[:file])
     redirect_to root_url, notice: "User data updated"
   end
 
+  def remove_users_and_roles
+    User.destroy_all
+  end
 
   # GET /users/1
   # GET /users/1.json
