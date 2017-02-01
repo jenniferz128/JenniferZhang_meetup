@@ -38,6 +38,14 @@ gem 'autoprefixer-rails'
 
 gem 'font-awesome-rails', '~> 4.1.0.0'
 
+group :development, :test do
+	gem 'rspec-rails', '~> 3.1.0'
+end
+
+gem 'rspec'
+
+gem 'minitest'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
